@@ -19,6 +19,8 @@ module.exports = ({ env }) => {
       admin: {
         watchIgnoreFiles: [
           '**/client/**',
+          '**/contracts/**',
+          '**/scripts/**',
         ],
         auth: {
           secret: env("ADMIN_JWT_SECRET", "74c0c7ce5c8efb5a0793fd102a86c886"),

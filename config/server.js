@@ -3,7 +3,7 @@ module.exports = ({ env }) => {
     return {
       host: env("HOST", "0.0.0.0"),
       port: env.int("PORT", 1337),
-      url: "https://api.nftworld.com",
+      url: "https://nftworld.herokuapp.com",
       admin: {
         url: "/",
         serveAdminPanel: false,

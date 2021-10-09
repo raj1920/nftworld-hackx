@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_global_wallets",
+  "info": {
+    "name": "Wallet",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "network": {
+      "type": "enumeration",
+      "enum": [
+        "Ethereum",
+        "Enjin"
+      ],
+      "default": "Ethereum",
+      "required": true
+    },
+    "private_key": {
+      "type": "text"
+    },
+    "connection": {
+      "type": "enumeration",
+      "enum": [
+        "Metamask",
+        "Automatic"
+      ],
+      "default": "Automatic",
+      "required": true
+    }
+  }
+}

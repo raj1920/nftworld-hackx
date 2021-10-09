@@ -1,3 +1,2 @@
-# Strapi application
+# NFTWorld
 
-A quick description of your strapi application

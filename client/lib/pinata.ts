@@ -1,9 +1,9 @@
-export const pinFileToIPFS = (jwt, file, token) => {
+export const pinFileToIPFS = async (jwt, file, name) => {
   var myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer ${jwt}`);
 
   var formdata = new FormData();
-  formdata.append("file", file, "1.jpeg");
+  formdata.append("file", file, name);
   formdata.append(
     "pinataMetadata",
     JSON.stringify({
@@ -21,8 +21,11 @@ export const pinFileToIPFS = (jwt, file, token) => {
     redirect: "follow",
   };
 
-  fetch("https://api.pinata.cloud/pinning/pinFileToIPFS", requestOptions)
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .catch((error) => console.log("error", error));
+  let response = await fetch(
+    "https://api.pinata.cloud/pinning/pinFileToIPFS",
+    requestOptions
+  );
+  let res = await response.json();
+
+  return res.IpfsHash;
 };

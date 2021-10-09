@@ -1,4 +1,8 @@
 # NFTWorld
+[![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
+
+## Hosted URLs
+- https://nftworld-6a237.web.app (Admin Panel)
 
 ## Reference
 - https://github.com/alchemyplatform/nft-minter-tutorial/tree/main/nft-minter

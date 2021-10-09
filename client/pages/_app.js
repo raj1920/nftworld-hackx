@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import 'react-activity-feed/dist/index.css';
-import Head from "next/head"
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -6,8 +6,8 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
-const contract = require("../../../artifacts/contracts/template.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contract = require("../../../artifacts/contracts/template.sol/NFTWorld.json")
+const contractAddress = process.env.CONTRACT_ADDRESS
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-services)

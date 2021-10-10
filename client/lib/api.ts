@@ -57,3 +57,10 @@ export async function createPost(post: IPost): Promise<string> {
     return "";
   }
 }
+
+export async function findHome() {
+  let res = await fetch(`http://localhost:1337/home`)
+  let response = await res.json();
+
+  return response;
+}

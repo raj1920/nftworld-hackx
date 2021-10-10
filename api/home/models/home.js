@@ -5,10 +5,4 @@
  * to customize this model
  */
 
-module.exports = {
-    lifecycles: {
-        async beforeCreate(data) {
-            await strapi.services.post.mintNFT(data.asset_link);
-        }
-    }
-};
+module.exports = {};

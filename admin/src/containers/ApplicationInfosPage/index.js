@@ -65,12 +65,7 @@ const ApplicationInfosPage = () => {
                 link={upgradeLink}
                 title={strapiVersion}
                 content={`v${appInfos.strapiVersion}`}
-              />
-              <Detail
-                link={{ label: pricingLabel, href: 'https://strapi.io/pricing' }}
-                title={editionTitle}
-                content={formatMessage({ id: currentPlan })}
-              />
+              />     
             </Flex>
             <Padded top size="lg">
               <Text fontSize="xs" color="grey" fontWeight="bold">

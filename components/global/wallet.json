@@ -15,13 +15,16 @@
       "type": "enumeration",
       "enum": [
         "Ethereum",
-        "Enjin"
+        "Enjin",
+        "BSC",
+        "Solana"
       ],
       "default": "Ethereum",
       "required": true
     },
     "private_key": {
-      "type": "text"
+      "type": "text",
+      "private": true
     },
     "connection": {
       "type": "enumeration",

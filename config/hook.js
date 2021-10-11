@@ -1,10 +1,10 @@
-module.exports = {
+module.exports = ({ env }) => ({
   settings: {
     algolia: {
       enabled: true,
-      applicationId: "EFWGDX27Z7",
-      apiKey: "998985569b4ebcbe82e0cd2397264c09",
+      applicationId: env('ALGOLIA_APPLICATION_ID'),
+      apiKey: env('ALGOLIA_API_KEY'),
       debug: true,
     },
   },
-};
+});

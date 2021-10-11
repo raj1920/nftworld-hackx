@@ -1,19 +1,17 @@
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
+  defaultConnection: "default",
   connections: {
     default: {
-      connector: 'mongoose',
+      connector: "mongoose",
       settings: {
-        host: env('DATABASE_HOST', 'trennds.par33.mongodb.net'),
-        srv: env.bool('DATABASE_SRV', true),
-        port: env.int('DATABASE_PORT', 27017),
-        database: env('DATABASE_NAME', 'nftworld'),
-        username: env('DATABASE_USERNAME', 'romitkarmakar'),
-        password: env('DATABASE_PASSWORD', '8561sara'),
+        uri: env("MONGODB_URI", "mongodb://localhost/nftworld"),
+        srv: env.bool("DATABASE_SRV", true),
+        port: env.int("DATABASE_PORT", 27017),
+        database: env("DATABASE_NAME"),
       },
       options: {
-        authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
-        ssl: env.bool('DATABASE_SSL', true),
+        authenticationDatabase: env("AUTHENTICATION_DATABASE", null),
+        ssl: env.bool("DATABASE_SSL", true),
       },
     },
   },
